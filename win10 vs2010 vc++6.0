@@ -1,0 +1,22 @@
+一.把旧工程导入到2010后会有一些错误。
+手动修改，比如:
+1)i没有定义。
+
+2)error C2383: “DRAWFUN”: 此符号中不允许有默认参数
+//typedef void(*DRAWFUN)(CDC* pDC,CPrintInfo* pInfo,void* pVoid=NULL);
+typedef void(*DRAWFUN)(CDC* pDC,CPrintInfo* pInfo,void* pVoid);
+
+3)如何去掉警告信息
+warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead.
+解决办法：
+工程->属性->配置属性->C/C++->预处理器->预处理器定义
+_CRT_SECURE_NO_DEPRECATE
+_SCL_SECURE_NO_DEPRECATE
+
+4)vs2010 warning MSB8012: TargetPath
+修改方法：
+修改工程链接器中的输出路径Release/$(ProjectName).exe，保持和配置的输出路径相同。
+
+
+5)设置为静态库。
+工程->配置属性->常规-> MFC的使用：在静态库中使用MFC
