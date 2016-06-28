@@ -1,0 +1,6 @@
+1.在source insight 里编辑的时候，每次粘贴后，光标停留在粘贴内容的左面。
+ 我想把它设定为 粘贴后，光标移动倒粘贴内容的右面。
+
+ 该怎么做？ 这是个设置问题，按照下面的步骤设定就可以了。
+
+ Options->Preferences...->Typing->After pasting,select:at end of pasted text->确定。
